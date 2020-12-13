@@ -1,10 +1,13 @@
 import React from 'react'
+import Navigation from '../Components/Navigation'
+import NavigationStyled from '../Components/NavigationStyled'
+
 
 
 export default function HomePage() {
     return (
-        <div>
-            <h1>Hej</h1>
-        </div>
+        <NavigationStyled>
+            <Navigation className="navBar"showMarkets={true}/>
+        </NavigationStyled>
     )
 }

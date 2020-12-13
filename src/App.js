@@ -9,12 +9,13 @@ import Navigation from './Components/Navigation';
 import HomePage from './Pages/HomePage';
 import DetailedItem from './Components/DetailedItem';
 import MarketItemDetailPage from './Pages/MarkedItemDetailedPage';
+import NavigationStyled from './Components/NavigationStyled'
 
 function App() {
   return (
     <div>
-      <Navigation/>
-            <Switch>
+{/*         <Navigation showNavigation={true} showMarkets={true}/>
+ */}            <Switch>
 
               <Route path="/crypto">
                   <Crypto/>
