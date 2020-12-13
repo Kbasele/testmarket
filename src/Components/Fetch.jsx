@@ -28,33 +28,18 @@ export default function Fetch({fetchThis, subName, market, value}) {
             </div>
         )
     }
-    if(fetchThis==="detailPage2"){
-        return(
-            <div>
-                {!MarketData && "LOADING"}
-               {
-               /* console.log(MarketData && Object.entries(MarketData)) */
-                MarketData && Object.entries(MarketData["crypto"]["usd"]).map(item=>{
-                    console.log(MarketData[market]["usd"]["0X-CRYPTO"]["price"])
-                    return <DetailedItem 
-                    value={item[0]}
-                    
-                    />
-                })} 
-            </div>
-        )
-
-    }
+    
     if(fetchThis==="detailPage"){
         return(
             <div>
                 {!MarketData && "LOADING"}
                {
                /* console.log(MarketData && Object.entries(MarketData)) */
-                MarketData && Object.entries(MarketData[market])[0].map(item=>{
-                    console.log(Object.entries(MarketData[market])[0])
+                MarketData && Object.entries(MarketData[market]).map((item, index)=>{
                     return <DetailedItem 
+                    key={index}
                     value={item[1]}
+                    ticker={value}
                     
                     />
                 })} 

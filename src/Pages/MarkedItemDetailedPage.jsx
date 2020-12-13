@@ -8,6 +8,7 @@ export default function MarketItemDetailPage(props) {
     const subName = props.match.params.subName
     console.log(market)
     console.log("hej")
+    console.log(value)
     return (
         <div>
              <Fetch fetchThis="detailPage" subName="sek" value={value} market={market}/>
